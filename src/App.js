@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/";
+import RandomRecipes from "./pages/RandomRecipes";
+import Shared from "./components/Shared";
+import CreateRecipe from "./pages/CreateRecipe";
+import { indigo } from "@mui/material/colors";
+import UserRecipes from "./pages/UserRecipes";
+
+const theme = createTheme({
+  palette: {
+    primary: indigo,
+    secondary: indigo,
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Shared>
+          <Routes>
+            <Route exact path="/" element={<RandomRecipes />}></Route>
+            <Route exact path="/create" element={<CreateRecipe />}></Route>
+            <Route exact path="/user-recipes" element={<UserRecipes />}></Route>
+          </Routes>
+        </Shared>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

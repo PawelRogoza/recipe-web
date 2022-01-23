@@ -1,0 +1,12 @@
+{
+  "recipes": [
+    {
+      "name": "Name2",
+      "category": "Meat",
+      "cousine": "Kuchnia2",
+      "description": "Description",
+      "ingredients": "Ingredients",
+      "id": 2
+    }
+  ]
+}
