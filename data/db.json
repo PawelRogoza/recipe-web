@@ -1,12 +1,44 @@
 {
   "recipes": [
     {
-      "name": "Name2",
-      "category": "Meat",
-      "cousine": "Kuchnia2",
-      "description": "Description",
-      "ingredients": "Ingredients",
-      "id": 2
+      "name": "Ryba ze szpinakiem",
+      "category": "danie wegetariańskie",
+      "cousine": "Polska",
+      "ingredients": "filety z dorady, oscypek gomółki, suszone pomidory, szalotka.",
+      "path": "https://s3.przepisy.pl/przepisy3ii/img/variants/800x0/dorada-ze-szpinakiem-na-ostro893037.jpg",
+      "instructions": "Na patelni na rozgrzanej oliwie podsmaż pokrojone w drobną kosteczkę cebulę, czosnek i chilli. Gdy cebula się zeszkli dodaj rozmrożony odciśnięty z soku szpinak.\nCałość smaż chwilę, dodaj pokrojone suszone pomidory.\nNastępnie ułóż na pergaminie skórą do dołu. Na każdy z filetów nałóż sporą ilość szpinaku i posyp go po wierzchu tartym oscypkiem.\nPergamin z rybami ułóż na kawałku drzewa owocowego, wcześniej moczonego w wodzie (potrzebny jest płaski plaster ucięty piłą). Kawałek drzewa wraz z rybami umieść na grillu na mocno rozgrzanym ruszcie. Rybę grilluj pod przykryciem około 20 minut.",
+      "time": "do godziny",
+      "id": 6
+    },
+    {
+      "name": "Curry z kurczaka",
+      "category": "danie z mięsem",
+      "cousine": "Indyjska",
+      "ingredients": "Ryż, pierś z kurczaka, pomidor, cebula, zielony groszek, papryczka chilli, czosnek, jogurt, olej.",
+      "path": "https://s3.przepisy.pl/przepisy3ii/img/variants/800x0/curry-z-kurczaka-2.jpg",
+      "instructions": "Ryż ugotuj według wskazówek na opakowaniu tak, aby był sypki. Po ugotowaniu odstaw do ostygnięcia.\nW dużym garnku podsmaż na oleju posiekany czosnek, chilli oraz cebulę.\nGdy warzywa się zrumienią dodaj curry, kumin, cynamon i gałkę muszkatołową. Podsmaż chwilę, żeby potrawa nabrała aromatu.\nNastępnie dodaj rozdrobnione pomidory i sok z limonek, i duś przez około 10 minut, aż powstanie gęsty sos.\nKurczaka pokrój w kostkę i wraz z groszkiem wrzuć do sosu.\nDo naczynia żaroodpornego wsyp ryż. Następnie zalej go gęstym sosem z mięsem. Naczynie przykryj i piecz w 180 stopniach przez 20 minut. Podawaj polane jogurtem.",
+      "time": "do godziny",
+      "id": 7
+    },
+    {
+      "name": "Jesienna zupa krem z dyni",
+      "category": "danie wegetariańskie",
+      "cousine": "Polska",
+      "ingredients": "dynia np. Hokkaido, mleko kokosowe, cebula, ząbek czosnku, kawałek świeżego imbiru, ok. 5 cm, brązowy cukier, pestki z dyni, olej rzepakowy",
+      "path": "https://s3.przepisy.pl/przepisy3ii/img/variants/800x0/creamy-pumpkin-soup_a386162.jpg",
+      "instructions": "Obierz i pokrój dynię na kawałki. Posiekaj cebulę i czosnek. Obierz i zetrzyj na tarce imbir. Przesmaż cebulę i czosnek na oleju.\nDodaj dynię, imbir i cukier. Smaż przez 5 min razem. Dodaj 1 l wody. Całość gotuj do miękkości, ok. 10 min.\nZmiksuj zupę na gładko. Dodaj mleko kokosowe i jeszcze raz zagotuj. Podawaj z pestkami dyni.",
+      "time": "do 30 minut",
+      "id": 8
+    },
+    {
+      "name": "Fasolka po bretońsku z kiełbasą",
+      "category": "danie z mięsem",
+      "cousine": "Meksykańska",
+      "ingredients": "ulubiona kiełbasa, Fix Leczo Knorr, cebula, biała fasolka z puszki, olej, woda",
+      "path": "https://s3.przepisy.pl/przepisy3ii/img/variants/800x0/fasolka-po-bretonsku-z-kielbasa.jpg",
+      "instructions": "Kiełbasę pokrój w pół plastry i podsmaż na patelni. Dodaj pokrojoną w centymetrową kostkę cebulę.\nPotrawę dopraw wymieszanym w szklance wody Fixem Knorr.\nDodaj odcedzoną fasolkę. Całość gotuj ok. 5 minut, aż sos zgęstnieje. Jeśli lubisz majeranek, dopraw nim potrawę do smaku.",
+      "time": "do 30 minut",
+      "id": 9
     }
   ]
 }

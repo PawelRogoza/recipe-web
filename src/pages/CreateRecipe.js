@@ -10,10 +10,13 @@ import { Button } from "@material-ui/core";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { useNavigate } from "react-router-dom";
+import { Select } from "@material-ui/core";
+import { InputLabel } from "@material-ui/core";
+import { MenuItem } from "@material-ui/core";
 
 const useStyles = makeStyles({
   container: {
-    marginTop: "80px",
+    marginTop: "100px",
     background: "aliceblue",
     width: "30%",
     minHeight: "420px",
@@ -28,8 +31,7 @@ const useStyles = makeStyles({
     marginTop: "20px",
   },
   button: {
-    // fontSize: "12px",
-    marginTop: "10px",
+    marginTop: "20px",
     width: "10vh",
   },
 });
@@ -43,25 +45,15 @@ export default function CreateRecipe() {
 
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
+  const [cousine, setCousine] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
-  const [vegetarian, setVegetarian] = useState(false);
-  const [nameError, setNameError] = useState(false);
-  const [ingredientsError, setIngredientsError] = useState(false);
+  const [path, setPath] = useState("");
+  const [time, setTime] = useState();
 
   const submit = (e) => {
     e.preventDefault();
 
-    if (name === "") {
-      setNameError(true);
-    } else {
-      setNameError(false);
-    }
-    if (ingredients === "") {
-      setIngredientsError(true);
-    } else {
-      setIngredientsError(false);
-    }
     if (name && ingredients) {
       fetch(API, {
         method: "POST",
@@ -69,9 +61,11 @@ export default function CreateRecipe() {
         body: JSON.stringify({
           name,
           category,
+          cousine,
           ingredients,
+          path,
           instructions,
-          vegetarian,
+          time,
         }),
       }).then(() => navigate("/"));
     }
@@ -93,6 +87,17 @@ export default function CreateRecipe() {
           fullWidth
           required
         ></TextField>
+
+        <TextField
+          className={styles.formField}
+          onChange={(e) => setCousine(e.target.value)}
+          label="Kuchnia"
+          variant="outlined"
+          color="primary"
+          fullWidth
+          required
+        ></TextField>
+
         <TextField
           className={styles.formField}
           onChange={(e) => setIngredients(e.target.value)}
@@ -104,31 +109,57 @@ export default function CreateRecipe() {
           fullWidth
           required
         ></TextField>
+
         <TextField
           className={styles.formField}
-          onChange={(e) => setIngredients(e.target.value)}
+          onChange={(e) => setInstructions(e.target.value)}
           label="Instrukcje przygotowania"
           variant="outlined"
           color="primary"
           multiline
           rows={5}
           fullWidth
-          required
         ></TextField>
 
-        <FormControl>
+        <TextField
+          className={styles.formField}
+          onChange={(e) => setPath(e.target.value)}
+          label="Link do zdjęcia"
+          variant="outlined"
+          color="primary"
+          fullWidth
+        ></TextField>
+
+        <FormControl className={styles.formField}>
+          <InputLabel>Czas przygotowania</InputLabel>
+          <Select
+            value={time}
+            label="Time"
+            onChange={(e) => setTime(e.target.value)}
+            style={{ width: "200px" }}
+          >
+            <MenuItem value={"do 30 minut"}>Do 30 minut</MenuItem>
+            <MenuItem value={"do godziny"}>Do godziny</MenuItem>
+            <MenuItem value={"do dwóch godzin"}>Do dwóch godzin</MenuItem>
+            <MenuItem value={"powyżej dwóch godzin"}>
+              Powyżej dwóch godzin
+            </MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl className={styles.formField}>
           <FormLabel>Danie</FormLabel>
           <RadioGroup
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
             <FormControlLabel
-              value="vege"
+              value="danie wegetariańskie"
               control={<Radio color="primary" />}
               label="Wegetariańskie"
             ></FormControlLabel>
             <FormControlLabel
-              value="meat"
+              value="danie z mięsem"
               control={<Radio color="primary" />}
               label="Mięsne"
             ></FormControlLabel>
@@ -140,7 +171,7 @@ export default function CreateRecipe() {
           type="submit"
           color="primary"
           variant="contained"
-          endIcon={<SendRoundedIcon></SendRoundedIcon>}
+          endIcon={<SendRoundedIcon />}
         >
           Dodaj
         </Button>

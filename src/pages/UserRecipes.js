@@ -14,13 +14,15 @@ const useStyles = makeStyles({
     // marginBottom: "px",
   },
   spacing: {
-    marginTop: "80px",
+    marginTop: "100px",
   },
 });
 
 const API = `http://localhost:5000/recipes`;
 
 export default function UserRecipes() {
+  const styles = useStyles();
+
   const [recipes, setRecipes] = useState([]);
 
   // fetch from json server
@@ -41,9 +43,9 @@ export default function UserRecipes() {
 
   return (
     <Container>
-      <Grid container spacing={4}>
+      <Grid container>
         {recipes.map((recipe) => (
-          <Grid item key={recipe.id} xs={12} md={6} lg={4}>
+          <Grid item key={recipe.id} xs={12} md={6} lg={6} spacing={2}>
             <RecipeCard
               recipe={recipe}
               deleteRecipe={deleteRecipe}

@@ -26,6 +26,13 @@ const useStyles = makeStyles({
     marginTop: "80px",
     width: "400px",
   },
+  vege: {
+    border: (recipe) => {
+      if (recipe.category === "vege") {
+        return "1px solid green";
+      }
+    },
+  },
 });
 
 const API = `http://localhost:5000/recipes`;
@@ -45,7 +52,7 @@ const ExpandMore = styled((props) => {
 export default function RecipeCard({ recipe, deleteRecipe }) {
   const styles = useStyles();
 
-  const cousineCategory = `${recipe.cousine} Cousine - ${recipe.category}`;
+  const cousineCategory = `${recipe.cousine} kuchnia - ${recipe.category} - ${recipe.time}`;
 
   const [expanded, setExpanded] = useState(false);
   const handleExpandClick = () => {
@@ -67,12 +74,14 @@ export default function RecipeCard({ recipe, deleteRecipe }) {
         }
         subheader={cousineCategory}
       />
-      {/* <CardMedia component="img" height="160" image={image} alt={recipe.name} /> */}
-      <CardContent>
-        <Typography variant="body2" color="textPrimary">
-          {recipe.description}
-        </Typography>
-      </CardContent>
+      {recipe.path && (
+        <CardMedia
+          component="img"
+          height="160"
+          image={recipe.path}
+          alt={recipe.name}
+        />
+      )}
       <CardActions>
         <IconButton></IconButton>
       </CardActions>
@@ -88,11 +97,11 @@ export default function RecipeCard({ recipe, deleteRecipe }) {
       {/* Expanded content */}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography variant="h5">How to cook</Typography>
+          <Typography variant="h5">Sposób przygotowania</Typography>
           <Typography paragraph fontSize={16}>
-            {recipe.description}
+            {recipe.instructions}
           </Typography>
-          <Typography variant="h5">Ingredients</Typography>
+          <Typography variant="h5">Składniki</Typography>
           <Typography paragraph fontSize={16}>
             {recipe.ingredients}
           </Typography>
