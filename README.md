@@ -1,8 +1,8 @@
 # recipe-web
 
-React & Material UI (tło: Hero Patterns)
+**React & Material UI** (tło: Hero Patterns)
 
-**Kulinarna aplikacja internetowa.**
+**Kulinarna aplikacja internetowa**
 Funkcjonalność:
 * Dodawanie przepisów użytkownika
 * Przeglądanie (oraz usuwanie) własnych przepisów
