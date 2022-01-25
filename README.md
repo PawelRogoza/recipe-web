@@ -11,13 +11,13 @@ Funkcjonalność:
 Komenda do wystartowania tymczasowej bazy danych (json-server):
 json-server --watch data/db.json --port 5000
 
-**Losowy przepis:**
+**Losowy przepis (kliknięcie w refresh generuje kolejny losowy przepis z API):**
 ![Losowy przepis](https://i.imgur.com/eOEeJv6.png)
 
 **Dodawanie przepisów:**
-![Dodawanie przepisów](https://i.imgur.com/PFkZ18h)
+![Dodawanie przepisów](https://i.imgur.com/PFkZ18h.png)
 
 **Przepisy użytkownika - rozwinięcie pokazuje sposób przygotowania i składniki**
-![Przepisy użytkownika](https://i.imgur.com/5tctPhW)
-![Rozwiniety przepis](https://i.imgur.com/EUJgMzC)
+![Przepisy użytkownika](https://i.imgur.com/5tctPhW.png)
+![Rozwiniety przepis](https://i.imgur.com/EUJgMzC.png)
 
