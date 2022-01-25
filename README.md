@@ -4,8 +4,8 @@ React & Material UI (tło: Hero Patterns)
 
 **Kulinarna aplikacja internetowa.**
 Funkcjonalność:
-* Dodawanie własnych przepisów użytkownika
-* Przeglądanie własnych przepisów
+* Dodawanie przepisów użytkownika
+* Przeglądanie (oraz usuwanie) własnych przepisów
 * Wygenerowanie losowego przepisu z API (tylko po angielsku)
 
 Komenda do wystartowania tymczasowej bazy danych (json-server):
