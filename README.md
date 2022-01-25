@@ -12,12 +12,12 @@ Komenda do wystartowania tymczasowej bazy danych (json-server):
 json-server --watch data/db.json --port 5000
 
 **Losowy przepis:**
-![Losowy przepis](https://imgur.com/eOEeJv6)
+![Losowy przepis](https://i.imgur.com/eOEeJv6.png)
 
 **Dodawanie przepisów:**
-![Dodawanie przepisów](https://imgur.com/PFkZ18h)
+![Dodawanie przepisów](https://i.imgur.com/PFkZ18h)
 
 **Przepisy użytkownika - rozwinięcie pokazuje sposób przygotowania i składniki**
-![Przepisy użytkownika](https://imgur.com/5tctPhW)
-![Rozwiniety przepis](https://imgur.com/EUJgMzC)
+![Przepisy użytkownika](https://i.imgur.com/5tctPhW)
+![Rozwiniety przepis](https://i.imgur.com/EUJgMzC)
 
