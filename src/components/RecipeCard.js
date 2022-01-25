@@ -26,13 +26,6 @@ const useStyles = makeStyles({
     marginTop: "80px",
     width: "400px",
   },
-  vege: {
-    border: (recipe) => {
-      if (recipe.category === "vege") {
-        return "1px solid green";
-      }
-    },
-  },
 });
 
 const API = `http://localhost:5000/recipes`;

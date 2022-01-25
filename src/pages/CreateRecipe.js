@@ -67,7 +67,7 @@ export default function CreateRecipe() {
           instructions,
           time,
         }),
-      }).then(() => navigate("/"));
+      }).then(() => navigate("/user-recipes"));
     }
     console.log("test");
   };

@@ -45,7 +45,7 @@ export default function UserRecipes() {
     <Container>
       <Grid container>
         {recipes.map((recipe) => (
-          <Grid item key={recipe.id} xs={12} md={6} lg={6} spacing={2}>
+          <Grid item key={recipe.id} xs={12} md={6} spacing={2}>
             <RecipeCard
               recipe={recipe}
               deleteRecipe={deleteRecipe}
